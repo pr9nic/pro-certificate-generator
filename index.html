@@ -91,12 +91,12 @@ button:active{transform:translateY(0)}
       <stop offset="100%" stop-color="#312e81"/>
     </linearGradient>
 
-    <!-- Star Symbols -->
+    <!-- Star Symbols (pre-scaled to exact size, no transforms!) -->
     <g id="sparkle">
-      <path d="M0,-11 Q0,0 11,0 Q0,0 0,11 Q0,0 -11,0 Q0,0 0,-11 Z" fill="#fbbf24"/>
+      <path d="M0,-9 Q0,0 9,0 Q0,0 0,9 Q0,0 -9,0 Q0,0 0,-9 Z" fill="#fbbf24"/>
     </g>
     <g id="star5">
-      <polygon points="0,-8 2.4,-2.5 8,-2.5 3.5,1 5.5,7 0,3.5 -5.5,7 -3.5,1 -8,-2.5 -2.4,-2.5"/>
+      <polygon points="0,-7 2.1,-2.2 7,-2.2 3.1,0.9 4.8,6.1 0,3.1 -4.8,6.1 -3.1,0.9 -7,-2.2 -2.1,-2.2"/>
     </g>
   </defs>
 
@@ -108,34 +108,34 @@ button:active{transform:translateY(0)}
   <rect x="26" y="26" width="543" height="790" rx="18" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="7 5"/>
   <rect x="33" y="33" width="529" height="776" rx="14" fill="url(#innerBgGrad)" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- Cheerful Corner Accents & Confetti -->
+  <!-- Cheerful Corner Accents & Confetti (exact coordinates, no transforms) -->
   <!-- Top Left -->
   <circle cx="50" cy="50" r="5" fill="#3b82f6"/>
   <circle cx="68" cy="44" r="3.5" fill="#ec4899"/>
   <circle cx="44" cy="68" r="4" fill="#10b981"/>
-  <use href="#sparkle" x="80" y="70" transform="scale(0.9)"/>
-  <use href="#star5" x="55" y="92" transform="scale(0.85)" fill="#f59e0b"/>
+  <use href="#sparkle" x="80" y="70"/>
+  <use href="#star5" x="55" y="92" fill="#f59e0b"/>
 
   <!-- Top Right -->
   <circle cx="545" cy="50" r="5" fill="#ec4899"/>
   <circle cx="527" cy="44" r="3.5" fill="#3b82f6"/>
   <circle cx="551" cy="68" r="4" fill="#f59e0b"/>
-  <use href="#sparkle" x="515" y="70" transform="scale(0.9)"/>
-  <use href="#star5" x="540" y="92" transform="scale(0.85)" fill="#10b981"/>
+  <use href="#sparkle" x="515" y="70"/>
+  <use href="#star5" x="540" y="92" fill="#10b981"/>
 
   <!-- Bottom Left -->
   <circle cx="50" cy="792" r="5" fill="#f59e0b"/>
   <circle cx="68" cy="798" r="3.5" fill="#3b82f6"/>
   <circle cx="44" cy="774" r="4" fill="#ec4899"/>
-  <use href="#sparkle" x="80" y="770" transform="scale(0.9)"/>
-  <use href="#star5" x="55" y="750" transform="scale(0.85)" fill="#8b5cf6"/>
+  <use href="#sparkle" x="80" y="770"/>
+  <use href="#star5" x="55" y="750" fill="#8b5cf6"/>
 
   <!-- Bottom Right -->
   <circle cx="545" cy="792" r="5" fill="#10b981"/>
   <circle cx="527" cy="798" r="3.5" fill="#ec4899"/>
   <circle cx="551" cy="774" r="4" fill="#3b82f6"/>
-  <use href="#sparkle" x="515" y="770" transform="scale(0.9)"/>
-  <use href="#star5" x="540" y="750" transform="scale(0.85)" fill="#f59e0b"/>
+  <use href="#sparkle" x="515" y="770"/>
+  <use href="#star5" x="540" y="750" fill="#f59e0b"/>
 
   <!-- Side confetti -->
   <circle cx="42" cy="240" r="3.5" fill="#fbbf24"/>
@@ -169,9 +169,9 @@ button:active{transform:translateY(0)}
     <!-- Emblem Image -->
     <image id="emblem" x="232.5" y="141" width="130" height="130"/>
 
-    <!-- Small Star Badges next to Medal -->
-    <use href="#star5" x="195" y="206" transform="scale(1.2)" fill="#fbbf24"/>
-    <use href="#star5" x="400" y="206" transform="scale(1.2)" fill="#fbbf24"/>
+    <!-- Side Stars next to Medal (clean unicode text, perfectly positioned) -->
+    <text x="195" y="213" font-size="22" fill="#fbbf24" text-anchor="middle">★</text>
+    <text x="400" y="213" font-size="22" fill="#fbbf24" text-anchor="middle">★</text>
 
     <!-- Document Title: ГРАМОТА (ONLY ГРАМОТА!) -->
     <text x="297.5" y="328" font-size="44" font-weight="900" fill="#1e3a8a" letter-spacing="4">ГРАМОТА</text>
@@ -181,15 +181,15 @@ button:active{transform:translateY(0)}
     <text x="297.5" y="360" font-size="12" font-weight="800" fill="#4338ca" letter-spacing="3">НАГРАЖДАЕТСЯ</text>
 
     <!-- Recipient Name -->
-    <text id="person" x="297.5" y="406" font-size="28" font-weight="bold" fill="#0f172a"></text>
+    <text id="person" x="297.5" y="404" font-size="28" font-weight="bold" fill="#0f172a"></text>
 
-    <!-- Decorative Underline with Star -->
-    <path d="M95 418 H265 M330 418 H500" stroke="#cbd5e1" stroke-width="1.5"/>
-    <use href="#star5" x="297.5" y="418" transform="scale(1.1)" fill="#f59e0b"/>
+    <!-- Decorative Underline with Centered Star (clean unicode, cannot shift or overlap!) -->
+    <path d="M95 418 H270 M325 418 H500" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="297.5" y="423" font-size="16" fill="#f59e0b" text-anchor="middle">★</text>
 
     <!-- Class & School -->
-    <text id="classText" x="297.5" y="442" font-size="14" font-weight="600" fill="#334155"></text>
-    <text id="schoolText" x="297.5" y="462" font-size="13" fill="#64748b"></text>
+    <text id="classText" x="297.5" y="444" font-size="14" font-weight="600" fill="#334155"></text>
+    <text id="schoolText" x="297.5" y="466" font-size="13" fill="#64748b"></text>
 
     <!-- Main Award Text (MANDATORY REQUIREMENT!) -->
     <text id="reason" x="297.5" y="500" font-size="15" font-weight="700" fill="#2563eb">за активное участие в реализации исследовательских маршрутов</text>
